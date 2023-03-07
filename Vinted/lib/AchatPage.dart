@@ -27,8 +27,7 @@ class AchatPage extends StatelessWidget {
 
           List<Vetement> vetements = snapshot.data!.docs.map((doc) => Vetement.fromSnapshot(doc)).toList();
 
-          return GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+          return ListView.builder(
             itemCount: vetements.length,
             itemBuilder: (context, index) {
               return GestureDetector(
